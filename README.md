@@ -27,7 +27,7 @@ This is a [Google Chrome](https://www.google.com/chrome/) Extension that helps w
 
  1. `Dowload the repository as zip`
  2. `Unzip the folder somewhere of your chosing`
- 3. `Go to chrome://extensions/` [(Click Here)](chrome://extensions/)
+ 3. `Go to chrome://extensions/`
  4. `Turn on developer mode` *(Top right)*
  
  ![enter image description here](https://i.imgur.com/pL7hyQR.png)
