@@ -39,5 +39,6 @@ This is a [Google Chrome](https://www.google.com/chrome/) Extension that helps w
 6. `Select the unzipped folder` *(See step 2)*
 7. `Enjoy an uncluttered group index`
 
-
-
+## Usage
+![The extension menu](https://i.imgur.com/ycmPdkK.png)
+The image above
