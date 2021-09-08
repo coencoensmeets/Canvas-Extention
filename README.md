@@ -42,7 +42,7 @@ This is a [Google Chrome](https://www.google.com/chrome/) Extension that helps w
 ## Usage
 In the menu, accessed by clicking the extension icon, has two usages: adding a group to be hiddin and removing a group to be hidden.
 
-**Adding** a new group is as simple as typing the name of the desired group in the text box and click **"Hide"**
+**Adding** a new group is as simple as typing the name of the desired group in the text box and click **"Hide"** *(The group entering is case sensitive)*
 
 **Removing** an added group can be done by clicking the desired group in the list of hidden groups. 
 
