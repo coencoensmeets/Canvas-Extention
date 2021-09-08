@@ -40,5 +40,13 @@ This is a [Google Chrome](https://www.google.com/chrome/) Extension that helps w
 7. `Enjoy an uncluttered group index`
 
 ## Usage
-![The extension menu](https://i.imgur.com/ycmPdkK.png)
-The image above
+In the menu, accessed by clicking the extension icon, has two usages: adding a group to be hiddin and removing a group to be hidden.
+
+**Adding** a new group is as simple as typing the name of the desired group in the text box and click **"Hide"**
+
+**Removing** an added group can be done by clicking the desired group in the list of hidden groups. 
+
+*(An example of *'Group001'* is installed automatically upon installation but can be removed* 
+
+## Extra Information
+This extension has been created within 24 hours and is thus not optimised. It is tested by me and it works. However, with this being my first real Javascript project, it will definitely not be a great code. It is also not looking great at the moment. Better looks is on the update list but a new school year has begun and thus it might take some time. Due to my inexperience with Javascript, no technical support/ bug fixing will be done. The extension was mainly made for myself and I decided to upload it because it might help others. But I simply do not have the time to make it work for every setup.
