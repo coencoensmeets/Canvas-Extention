@@ -31,9 +31,11 @@ This is a [Google Chrome](https://www.google.com/chrome/) Extension that helps w
  4. `Turn on developer mode` *(Top right)*
  
  ![enter image description here](https://i.imgur.com/pL7hyQR.png)
+ 
  5. `Unload unpacked` *(Top left)*
  
  ![enter image description here](https://i.imgur.com/VCNlhmo.png)
+ 
 6. `Select the unzipped folder` *(See step 2)*
 7. `Enjoy an uncluttered group index`
 
