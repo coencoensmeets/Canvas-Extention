@@ -22,7 +22,7 @@ function insert_menu_function(){
 	 	<button class="button-1" style="background-color: #ED2626;" role="button" onclick=" window.open('https://tue.osiris-student.nl/','_blank')">Osiris</button>
 	 	<button class="button-1" style="background-color: #7C9AF8;" role="button" onclick=" window.open('https://outlook.office.com/calendar/view/week')">Calendar</button>
 	 	<button class="button-1" style="background-color: #1845D0;" role="button" onclick=" window.open('https://outlook.office.com/mail/')">Mail</button>
-	 	<button class="button-1" style="background-color: #C624A5;" role="button" onclick=" window.open(https://mytue.tue.nl/dashboard/home')">MyTUe</button>
+	 	<button class="button-1" style="background-color: #C624A5;" role="button" onclick=" window.open('https://mytue.tue.nl/dashboard/home')">MyTUe</button>
 		<button class="button-1" style="background-color: #33C624;" role="button" onclick=" window.open('https://osirisplanapp.tue.nl/#/')">PlanApp</button>
 		<button class="button-1" style="background-color: #F1AE32;" role="button" onclick=" window.open(https://tue.aattendance.nl/student/colloquia')">MyAttendance</button>
 		</div>
