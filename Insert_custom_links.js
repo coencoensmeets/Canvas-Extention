@@ -240,7 +240,7 @@ async function insert_link_html(data){
 			</style>
 			`)
 	}
-		if (data[2].includes("https://") == false && data[2].includes("http://")==false){
+		if (data[2].includes("https://") == false && data[2].includes("http://")==false && data[2].includes("file://")==false){
 			data[2] = "https://"+data[2]
 		}
 		await navigation.insertAdjacentHTML('beforeend', `
