@@ -22,6 +22,11 @@
 			"matches": ["https://*/*"],
 			"js": ["insert_custom_links.js"],
 			"run_at": "document_end"
+		},
+		{
+			"matches": ["https://*/*"],
+			"js": ["group_cards.js"],
+			"run_at": "document_end"
 		}
 	]
 }

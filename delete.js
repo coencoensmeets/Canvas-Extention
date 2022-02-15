@@ -25,10 +25,10 @@ document.addEventListener('DOMNodeInserted', nodeInsertedCallback);
 async function Remove_groups(items){
   result = await getLocalStorageValue("list_groups_unhighlighted");
   list = result.list_groups_unhighlighted
-  console.log(list)
 	for (let i = 0; i < items.length; i++){
-	  Text_test = items[i].text.replace(/\s+/g, '')
-	  if (list.includes(Text_test)==true){
+		item_url_split = items[i].href.split("/")
+		item_url = item_url_split[item_url_split.length-1]
+	  if (list.includes(item_url)==true){
 		items[i].text = ""
 	  }
 	  }
@@ -36,13 +36,17 @@ async function Remove_groups(items){
 
 
 async function add_unhighlighted(item){
-	group=item.replace(/\s+/g, '')
+	url_add = item.getElementsByTagName("a")[0].href.split("/")
+	group = url_add[url_add.length-1]
+	console.log(url_add)
+
 	result = await getLocalStorageValue("list_groups_unhighlighted");
   	let list = result.list_groups_unhighlighted
 	if (list.indexOf(group) == -1) {
   		list.push(group)
 	}
 	list_groups_unhighlighted = list
+	console.log(list_groups_unhighlighted)
 	await chrome.storage.sync.set({ list_groups_unhighlighted });
 
 	result = await getLocalStorageValue("list_groups_highlighted");
@@ -59,7 +63,8 @@ async function add_unhighlighted(item){
 }
 
 async function add_highlighted(item){
-	group=item.replace(/\s+/g, '')
+	url_add = item.getElementsByTagName("a")[0].href.split("/")
+	group = url_add[url_add.length-1]
 	result = await getLocalStorageValue("list_groups_highlighted");
   	let list = result.list_groups_highlighted
 	if (list.indexOf(group) == -1) {
@@ -99,7 +104,6 @@ async function add_stars(){
 			</style>
 		`)
 	}
-	console.log("Test")
 	let table = document.getElementsByTagName("tr")[0]
 	if (table.getElementsByClassName("course-list-star-column").length==0){
 	await table.insertAdjacentHTML('afterbegin', `
@@ -131,17 +135,19 @@ async function add_stars(){
 	group_i = all_groups_items[i];
 	let all_groups = document.getElementById("current_groups_table")
 	all_groups_items = all_groups.getElementsByTagName("tr")
-	name_of_group = group_i.getElementsByTagName("td")[1].childNodes[1].innerHTML
+	url_add = group_i.getElementsByTagName("a")[0].href.split("/")
+	url_group_i = url_add[url_add.length-1] 
 	element = group_i.getElementsByClassName("course-list-favorite-icon icon-star")[0]
 
-	if (list_unhighlighted_groups.indexOf(name_of_group.replace(/\s+/g, '')) > -1){
+	if (list_unhighlighted_groups.indexOf(url_group_i) > -1){
 		element.parentElement.className = "  course-list-favoritable";
 		element.className="course-list-favorite-icon icon-star-light";
 		element.addEventListener('click', empty_star_clicked, {once : true})
 	}
 	else{
 		element.addEventListener('click', full_star_clicked, {once : true})
-		await add_highlighted (name_of_group)
+		
+		await add_highlighted (group_i)
 	}
 	}
 	// await change_stars(all_groups_items[all_groups_items.length-i])
@@ -156,14 +162,13 @@ function full_star_clicked(event){
 	event.target.className="course-list-favorite-icon icon-star-light";
 	event.target.addEventListener('click', empty_star_clicked, {once : true})
 	full_row = event.target.parentElement.parentElement.parentElement
-	name_of_group = full_row.getElementsByTagName("td")[1].childNodes[1].innerHTML
-	add_unhighlighted(name_of_group)
+	add_unhighlighted(full_row)
 }	
 function empty_star_clicked(event){
 	event.target.parentElement.className = " course-list-favorite-course  course-list-favoritable";
 	event.target.className="course-list-favorite-icon icon-star";
 	event.target.addEventListener('click', full_star_clicked, {once : true})
 	full_row = event.target.parentElement.parentElement.parentElement
-	name_of_group = full_row.getElementsByTagName("td")[1].childNodes[1].innerHTML
-	add_highlighted(name_of_group)
+	console.log(full_row)
+	add_highlighted(full_row)
 }
