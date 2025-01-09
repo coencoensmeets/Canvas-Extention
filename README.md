@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/coencoensmeets/Canvas-Extention">
-    <img src="https://csdlearns.com/wp-content/uploads/2021/06/1Canvas-Logo.png" alt="Logo" width="80" height="80">
+    <img src="https://cdn.prod.website-files.com/5f7685be6c8c113f558855d9/62c87dbd6208a1e98e89e707_Logo_Canvas_Red_Vertical%20copy.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">CANVAS Improver</h3>
